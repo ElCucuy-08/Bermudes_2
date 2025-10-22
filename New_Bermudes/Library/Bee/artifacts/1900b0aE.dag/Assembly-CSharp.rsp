@@ -499,6 +499,13 @@
 "Assets/Assets/Standard Assets/Vehicles/Car/Scripts/SkidTrail.cs"
 "Assets/Assets/Standard Assets/Vehicles/Car/Scripts/Suspension.cs"
 "Assets/Assets/Standard Assets/Vehicles/Car/Scripts/WheelEffects.cs"
+"Assets/Scripts/CameraShake.cs"
+"Assets/Scripts/HorrorTrigger.cs"
+"Assets/Scripts/inventory.cs"
+"Assets/Scripts/MenuController.cs"
+"Assets/Scripts/MenuESC.cs"
+"Assets/Scripts/PlayerHealth.cs"
+"Assets/Scripts/RadioTrigger.cs"
 -langversion:9.0
 /deterministic
 /optimize+
