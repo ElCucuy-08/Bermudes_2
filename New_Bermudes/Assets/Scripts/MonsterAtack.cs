@@ -8,7 +8,7 @@ public class MonsterAtack : MonoBehaviour
     public float attackRadius = 10f; // Радиус, в котором монстр атакует
     public float attackCooldown = 2f; // Задержка между атаками
     private bool canAttack = true;
-
+    public PlayerHealth health;
     void Update()
     {
         // Проверяем расстояние до игрока
@@ -16,18 +16,17 @@ public class MonsterAtack : MonoBehaviour
         {
             if (canAttack)
             {
-                Attack();
+               // Attack();
                 canAttack = false;
                 Invoke(nameof(ResetAttack), attackCooldown);
             }
         }
     }
 
-    void Attack()
-    {
-        Debug.Log("Монстр атакует игрока!");
-        // Здесь можно добавить логику атаки: наносить урон, воспроизводить анимацию и т.д.
-    }
+    //void Attack()
+    //{
+    //    health.TakeDamage(10);
+    //}
 
     void ResetAttack()
     {

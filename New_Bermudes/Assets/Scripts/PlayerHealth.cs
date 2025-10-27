@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int currentHealth = 100;
-
+    public Bars bar;
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -15,11 +16,11 @@ public class PlayerHealth : MonoBehaviour
         {
             Die();
         }
+        bar.SetFillAmount(currentHealth);
     }
-
-    private void Die()
+    
+    private void Die(int index = 0)
     {
-        Debug.Log("Игрок умер!");
-        // Здесь можно добавить логику смерти (респаун, рестарт уровня и т.д.)
+        SceneManager.LoadScene(index);
     }
 }
