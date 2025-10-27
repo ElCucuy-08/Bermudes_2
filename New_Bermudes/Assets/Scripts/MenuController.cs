@@ -1,21 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    public void OnPlay()
+
+
+   public void SceneLoad(int indexScene)
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(indexScene);
     }
-    public void OnExit()
+    
+    public void Exit()
     {
         Application.Quit();
-    }
-
-    public void OnSatting()
-    {
-        SceneManager.LoadScene("Setting");
     }
 }
