@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class death : MonoBehaviour
 {
@@ -16,8 +17,7 @@ public class death : MonoBehaviour
     {
         if(hp.health <= 0f)
         {
-            cam2.SetActive(false);
-            cam1.SetActive(true);
+            SceneManager.LoadScene(4);
         }
     }
 }
