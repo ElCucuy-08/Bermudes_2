@@ -6,7 +6,7 @@ public class MonsterAtack : MonoBehaviour
 {
     public Transform player; // Ссылка на игрока
     public float attackRadius = 10f; // Радиус, в котором монстр атакует
-    public float attackCooldown = 2f; // Задержка между атаками
+    public float attackCooldown = 232f; // Задержка между атаками
     private bool canAttack = true;
     public PlayerHealth health;
     void Update()
@@ -16,17 +16,17 @@ public class MonsterAtack : MonoBehaviour
         {
             if (canAttack)
             {
-               // Attack();
+                Attack();
                 canAttack = false;
                 Invoke(nameof(ResetAttack), attackCooldown);
             }
         }
     }
 
-    //void Attack()
-    //{
-    //    health.TakeDamage(10);
-    //}
+    void Attack()
+    {
+        health.TakeDamage(10);
+    }
 
     void ResetAttack()
     {

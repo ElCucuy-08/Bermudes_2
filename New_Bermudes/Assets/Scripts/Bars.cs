@@ -3,23 +3,23 @@ using UnityEngine.UI;
 public class Bars : MonoBehaviour
 {
 
-    public Image myImage; // Перетащите сюда компонент Image из инспектора
+    public Image[] myImages = new Image[3];  // Перетащите сюда компонент Image из инспектора
     public float targetFillAmount = 0.5f; // Значение от 0 до 1
-
+    public int indexofImage;
     void Start()
     {
-        if (myImage == null)
+        if (myImages == null)
         {
-            myImage = GetComponent<Image>();
+            myImages = GetComponent<Image[]>();
         }
     }
 
     void Update()
     {
         // Пример: постепенное изменение fillAmount
-        if (myImage != null && myImage.fillAmount != targetFillAmount)
+        if (myImages[indexofImage] != null && myImages[indexofImage].fillAmount != targetFillAmount)
         {
-            myImage.fillAmount = Mathf.Lerp(myImage.fillAmount, targetFillAmount, Time.deltaTime);
+            myImages[indexofImage].fillAmount = Mathf.Lerp(myImages[indexofImage].fillAmount, targetFillAmount, Time.deltaTime);
         }
     }
 
