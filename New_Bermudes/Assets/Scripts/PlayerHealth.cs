@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
         }
         bar.SetFillAmount(currentHealth);
     }
-    
+
     private void Die(int index = 0)
     {
         SceneManager.LoadScene(index);
@@ -29,10 +29,16 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.gameObject.CompareTag("pharmacy"))
         {
-            if(currentHealth != 100)
+            if (currentHealth != 100)
             {
                 currentHealth += addXP;
+                Debug.Log("Хил");
             }
+        }
+        else if(other.gameObject.CompareTag("monster"))
+        {
+            currentHealth -= 10;
+            Debug.Log("монстры атакуют");
         }
     }
 }

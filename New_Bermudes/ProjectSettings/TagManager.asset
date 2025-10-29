@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Points
+  - points4
+  - points1
+  - points5
+  - points3
+  - points6
+  - points2
+  - monster
+  - pharmacy
   layers:
   - Default
   - TransparentFX
