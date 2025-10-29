@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int currentHealth = 100;
     public Bars bar;
+    public int addXP = 3;
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -22,5 +23,16 @@ public class PlayerHealth : MonoBehaviour
     private void Die(int index = 0)
     {
         SceneManager.LoadScene(index);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("pharmacy"))
+        {
+            if(currentHealth != 100)
+            {
+                currentHealth += addXP;
+            }
+        }
     }
 }
