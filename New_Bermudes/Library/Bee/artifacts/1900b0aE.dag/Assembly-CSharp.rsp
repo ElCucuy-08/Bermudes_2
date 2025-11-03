@@ -551,6 +551,7 @@
 "Assets/Scripts/MonsterAtack.cs"
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/RadioTrigger.cs"
+"Assets/Scripts/StaminaScript.cs"
 -langversion:9.0
 /deterministic
 /optimize+
