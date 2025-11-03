@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            //Die();
+            Die();
         }
         bar.indexofImage = 0;
         bar.SetFillAmount(currentHealth);
