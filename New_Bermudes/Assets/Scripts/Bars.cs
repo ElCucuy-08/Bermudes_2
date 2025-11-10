@@ -4,7 +4,7 @@ public class Bars : MonoBehaviour
 {
 
     public Image[] myImages = new Image[3];  // Перетащите сюда компонент Image из инспектора
-    public float targetFillAmount = 1f; // Значение от 0 до 1
+    public float targetFillAmount = 1; // Значение от 0 до 1
     public int indexofImage;
     void Start()
     {

@@ -1,5 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI; // Для работы с UI (например, слайдер выносливости)
+using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson; // Для работы с UI (например, слайдер выносливости)
 
 public class StaminaScript : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class StaminaScript : MonoBehaviour
     [SerializeField] private float staminaDrainRate = 10f; // Скорость уменьшения выносливости при беге
     [SerializeField] private float staminaRecoverRate = 5f; // Скорость восстановления выносливости
     [SerializeField] private float staminaRecoverDelay = 2f; // Задержка перед восстановлением
-
+    public FirstPersonController FirstPersonController;
     [Header("UI")]
     //[SerializeField] private Slider staminaSlider; // Слайдер для отображения выносливости
 
@@ -26,12 +27,20 @@ public class StaminaScript : MonoBehaviour
     private void Update()
     {
         // Пример: если нажат Shift, персонаж бежит
-        isRunning = Input.GetKey(KeyCode.LeftShift);
-
+        isRunning = !FirstPersonController.m_IsWalking;
+        if (currentStamina > 0)
+        {
+            FirstPersonController.CanRun = true;
+        }
+        else
+        {
+            FirstPersonController.CanRun = false;
+        }
         if (isRunning && currentStamina > 0)
         {
             currentStamina -= staminaDrainRate * Time.deltaTime;
             recoverTimer = 0f;
+
         }
         else
         {
