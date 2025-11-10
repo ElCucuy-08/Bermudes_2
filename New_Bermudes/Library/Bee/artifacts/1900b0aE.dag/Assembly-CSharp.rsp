@@ -544,6 +544,7 @@
 "Assets/Scripts/death.cs"
 "Assets/Scripts/deathManager.cs"
 "Assets/Scripts/finish_1.cs"
+"Assets/Scripts/Finish_Credits.cs"
 "Assets/Scripts/HorrorTrigger.cs"
 "Assets/Scripts/hp.cs"
 "Assets/Scripts/inventory.cs"
