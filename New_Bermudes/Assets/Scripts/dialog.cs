@@ -15,7 +15,9 @@ public class NewBehaviourScript : MonoBehaviour
     [SerializeField] Text Dialog6;
     [SerializeField] Text Dialog7;
     [SerializeField] Text Dialog8;
-    
+    string idf = "Babka";
+    double asd = 0;
+
     private void Start()
     {
         
@@ -28,106 +30,121 @@ public class NewBehaviourScript : MonoBehaviour
         Dialog7.gameObject.SetActive(false);
         Dialog8.gameObject.SetActive(false);
     }
-    void Dialog2g()
+    void Timer()
     {
-        Dialog1.gameObject.SetActive(false);
-        Dialog2.gameObject.SetActive(true);
-        while (true)
+        asd += 0.2;
+    }
+    void Updatetime()
+    {
+        Timer();
+        if (asd > 0&&asd<1)
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Dialog3g();
-            }
+
+
+
+            Dialog1.gameObject.SetActive(false);
+            Dialog2.gameObject.SetActive(true);
+            
+        }
+        else if (asd >60&&asd<120)
+        {
+
+            Dialog2.gameObject.SetActive(false);
+            Dialog3.gameObject.SetActive(true);
+            
+
+
+        }
+        else if (asd > 120&&asd<180)
+        {
+
+
+
+            Dialog3.gameObject.SetActive(false);
+            Dialog4.gameObject.SetActive(true);
+            
+
+
+        }
+        else if (asd > 180&&asd<240)
+        {
+
+
+
+            Dialog4.gameObject.SetActive(false);
+            Dialog5.gameObject.SetActive(true);
+            
+
+
+        }
+        else if (asd>240&&asd<300)
+        {
+
+
+
+            Dialog5.gameObject.SetActive(false);
+            Dialog6.gameObject.SetActive(true);
+            
+
+
+        }
+        else if (asd > 300 && asd < 360)
+        {
+
+
+
+            Dialog6.gameObject.SetActive(false);
+            Dialog7.gameObject.SetActive(true);
+            
+
+
+        }
+        else if (asd > 360 && asd<420)
+        {
+
+
+            Dialog7.gameObject.SetActive(false);
+            Dialog8.gameObject.SetActive(true);
+
+            
+
+
+        }
+        else if (asd > 420)
+        {
+
+
+            Dialog8.gameObject.SetActive(false);
+            
+
+
+
+
         }
     }
-    void Dialog3g()
-    {
-        Dialog2.gameObject.SetActive(false);
-        Dialog3.gameObject.SetActive(true);
-        while (true)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Dialog4g();
-            }
-        }
-    }
-    void Dialog4g()
-    {
-        Dialog3.gameObject.SetActive(false);
-        Dialog4.gameObject.SetActive(true);
-        while (true)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Dialog5g();
-            }
-        }
-    }
-    void Dialog5g()
-    {
-        Dialog4.gameObject.SetActive(false);
-        Dialog5.gameObject.SetActive(true);
-        while (true)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Dialog6g();
-            }
-        }
-    }
-    void Dialog6g()
-    {
-        Dialog5.gameObject.SetActive(false);
-        Dialog6.gameObject.SetActive(true);
-        while (true)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Dialog7g();
-            }
-        }
-    }
-    void Dialog7g()
-    {
-        Dialog6.gameObject.SetActive(false);
-        Dialog7.gameObject.SetActive(true);
-        while (true)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Dialog8g();
-            }
-        }
-    }
-    void Dialog8g()
-    {
-        Dialog7.gameObject.SetActive(false);
-        Dialog8.gameObject.SetActive(true);
-        while (true)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Dialog8.gameObject.SetActive(false);
-            }
-        }
-    }
+
     private void OnTriggerStay(Collider other)
     {
-        string idf = "Babka";
-        if (other.CompareTag(idf))
+        
+        if (other.CompareTag("Babka"))
         {
-            Dialog1.gameObject.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Dialog2g();
-                idf = "Bab";
-            }
+            Updatetime();
+
+
+
         }
+        
     }
     private void OnTriggerExit(Collider other)
     {
         Dialog1.gameObject.SetActive(false);
-        
+        Dialog2.gameObject.SetActive(false);
+        Dialog3.gameObject.SetActive(false);
+        Dialog4.gameObject.SetActive(false);
+        Dialog5.gameObject.SetActive(false);
+        Dialog6.gameObject.SetActive(false);
+        Dialog7.gameObject.SetActive(false);
+        Dialog8.gameObject.SetActive(false);
+
     }
 }
