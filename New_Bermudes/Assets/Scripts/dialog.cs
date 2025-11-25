@@ -5,8 +5,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class NewBehaviourScript : MonoBehaviour
 {
+    public AudioSource audioSource;
     [SerializeField] Text Dialog1;
     [SerializeField] Text Dialog2;
     [SerializeField] Text Dialog3;
@@ -29,14 +31,29 @@ public class NewBehaviourScript : MonoBehaviour
         Dialog6.gameObject.SetActive(false);
         Dialog7.gameObject.SetActive(false);
         Dialog8.gameObject.SetActive(false);
+        
+        
     }
     void Timer()
     {
         asd += 0.2;
     }
+    
+    public void TurnOffSound()
+    {
+        audioSource.mute = true;
+    }
+
+    
+    public void TurnOnSound()
+    {
+        audioSource.mute = false;
+    }
+
     void Updatetime()
     {
         Timer();
+        
         if (asd > 0&&asd<1)
         {
 
@@ -129,11 +146,15 @@ public class NewBehaviourScript : MonoBehaviour
         if (other.CompareTag("Babka"))
         {
             Updatetime();
-
+            
 
 
         }
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        TurnOnSound();
     }
     private void OnTriggerExit(Collider other)
     {
@@ -145,6 +166,7 @@ public class NewBehaviourScript : MonoBehaviour
         Dialog6.gameObject.SetActive(false);
         Dialog7.gameObject.SetActive(false);
         Dialog8.gameObject.SetActive(false);
-
+        asd = 0;
+        TurnOffSound();
     }
 }
