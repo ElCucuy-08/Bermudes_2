@@ -536,6 +536,7 @@
 "Assets/monstersPrefabs/Monster/walk4.cs"
 "Assets/monstersPrefabs/Monster/walk5.cs"
 "Assets/monstersPrefabs/Monster/walk6.cs"
+"Assets/QuickOutline/Scripts/Outline.cs"
 "Assets/Scripts/aidHpRegen.cs"
 "Assets/Scripts/Bars.cs"
 "Assets/Scripts/CameraShake.cs"
