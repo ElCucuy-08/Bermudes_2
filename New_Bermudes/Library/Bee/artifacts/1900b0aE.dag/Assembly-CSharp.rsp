@@ -547,6 +547,7 @@
 "Assets/Reference Pose/Perfect Look At Assets/Codes/PerfectLookAtLegStabilizer.cs"
 "Assets/Scripts/aidHpRegen.cs"
 "Assets/Scripts/Bars.cs"
+"Assets/Scripts/BEGIN.cs"
 "Assets/Scripts/CameraShake.cs"
 "Assets/Scripts/death.cs"
 "Assets/Scripts/deathManager.cs"
