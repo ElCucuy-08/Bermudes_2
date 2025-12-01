@@ -7,7 +7,7 @@ public class death : MonoBehaviour
 {
     public GameObject cam1;
     public GameObject cam2;
-    public hp hp;
+    public PlayerHealth hp;
     void Start()
     {
         cam1.gameObject.SetActive(false);
@@ -15,7 +15,7 @@ public class death : MonoBehaviour
 
     void Update()
     {
-        if(hp.health <= 0f)
+        if(hp.currentHealth <= 0f)
         {
             SceneManager.LoadScene(4);
         }

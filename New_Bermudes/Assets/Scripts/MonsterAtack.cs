@@ -25,7 +25,7 @@ public class MonsterAtack : MonoBehaviour
 
     void Attack()
     {
-        health.TakeDamage(10);
+        health.currentHealth -= 10;
     }
 
     void ResetAttack()

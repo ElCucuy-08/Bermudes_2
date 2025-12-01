@@ -33880,7 +33880,7 @@ MonoBehaviour:
   player: {fileID: 1793306238}
   attackRadius: 10
   attackCooldown: 2
-  health: {fileID: 2070805861}
+  health: {fileID: 2070805875}
 --- !u!114 &97675019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58632,7 +58632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69fb57304e49e2c49b3982caa39315af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: {fileID: 1405296482}
+  hp: {fileID: 0}
   aid: {fileID: 192594230}
 --- !u!1001 &192995156
 PrefabInstance:
@@ -60028,7 +60028,7 @@ MonoBehaviour:
   player: {fileID: 1793306238}
   attackRadius: 10
   attackCooldown: 2
-  health: {fileID: 2070805861}
+  health: {fileID: 2070805875}
 --- !u!114 &204865653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212025,7 +212025,7 @@ MonoBehaviour:
   player: {fileID: 1793306238}
   attackRadius: 10
   attackCooldown: 2
-  health: {fileID: 2070805861}
+  health: {fileID: 2070805875}
 --- !u!114 &948341833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258157,7 +258157,7 @@ MonoBehaviour:
   player: {fileID: 1793306238}
   attackRadius: 10
   attackCooldown: 2
-  health: {fileID: 2070805861}
+  health: {fileID: 2070805875}
 --- !u!114 &1215069537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297743,7 +297743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2158be8523da6d542ab1ce0f90fd57ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: {fileID: 2070805875}
   hpBar: {fileID: 924848370}
 --- !u!1001 &1405534526
 PrefabInstance:
@@ -329240,7 +329240,7 @@ MonoBehaviour:
   player: {fileID: 1793306238}
   attackRadius: 10
   attackCooldown: 2
-  health: {fileID: 2070805861}
+  health: {fileID: 2070805875}
 --- !u!114 &1564974197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353637,7 +353637,7 @@ MonoBehaviour:
   player: {fileID: 1793306238}
   attackRadius: 10
   attackCooldown: 2
-  health: {fileID: 2070805861}
+  health: {fileID: 2070805875}
 --- !u!114 &1650586884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379176,8 +379176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2158be8523da6d542ab1ce0f90fd57ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  hpBar: {fileID: 0}
+  health: {fileID: 2070805875}
+  hpBar: {fileID: 924848370}
 --- !u!1001 &1762567744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -381888,7 +381888,7 @@ MonoBehaviour:
   player: {fileID: 1793306238}
   attackRadius: 10
   attackCooldown: 2
-  health: {fileID: 2070805861}
+  health: {fileID: 2070805875}
 --- !u!114 &1784815900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382674,7 +382674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -382747,9 +382747,6 @@ PrefabInstance:
       addedObject: {fileID: 2070805855}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2070805861}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2070805866}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       insertIndex: -1
@@ -382757,6 +382754,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2070805871}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2070805875}
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
 --- !u!4 &1793306238 stripped
 Transform:
@@ -439628,21 +439628,6 @@ MonoBehaviour:
   - {fileID: 370406401}
   targetFillAmount: 1
   indexofImage: 0
---- !u!114 &2070805861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070805854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a7002d199059ee4f8388e163e189545, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 100
-  bar: {fileID: 2070805855}
-  addXP: 3
 --- !u!114 &2070805866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439707,6 +439692,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 811816716}
+--- !u!114 &2070805875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070805854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7002d199059ee4f8388e163e189545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 100
+  health: {fileID: 2070805875}
+  hpBar: {fileID: 924848370}
 --- !u!1001 &2072152431
 PrefabInstance:
   m_ObjectHideFlags: 0

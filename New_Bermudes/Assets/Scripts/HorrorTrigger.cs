@@ -43,7 +43,7 @@ public class HorrorTrigger : MonoBehaviour
                     StartCoroutine(CameraShake.Shake(shakeDuration, shakeMagnitude));
                     break;
                 case 2:
-                    other.GetComponent<PlayerHealth>().TakeDamage(damageAmount); // Предполагается, что у игрока есть скрипт PlayerHealth
+                    other.GetComponent<PlayerHealth>().currentHealth -= damageAmount; // Предполагается, что у игрока есть скрипт PlayerHealth
                     break;
             }
         }
