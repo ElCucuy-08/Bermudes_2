@@ -4,6 +4,7 @@ using UnityStandardAssets.Characters.FirstPerson; // Для работы с UI (например, 
 
 public class StaminaScript : MonoBehaviour
 {
+
     [Header("Настройки выносливости")]
     [SerializeField] private float maxStamina = 100f; // Максимальная выносливость
     [SerializeField] private float currentStamina;   // Текущая выносливость
@@ -13,15 +14,15 @@ public class StaminaScript : MonoBehaviour
     public FirstPersonController FirstPersonController;
     [Header("UI")]
     //[SerializeField] private Slider staminaSlider; // Слайдер для отображения выносливости
-
+    public float targetFillAmount = 1; // Значение от 0 до 1
     private bool isRunning = false;
     private float recoverTimer = 0f;
-    public Bars bars = new Bars();
+    public Slider Images;
     private void Start()
     {
-        //currentStamina = maxStamina;
-        //if (staminaSlider != null)
-        //    staminaSlider.maxValue = maxStamina;
+        currentStamina = maxStamina;
+        if (Images != null)
+            Images.maxValue = maxStamina;
     }
 
     private void Update()
@@ -57,10 +58,7 @@ public class StaminaScript : MonoBehaviour
         // Ограничиваем выносливость в диапазоне [0, maxStamina]
         currentStamina = Mathf.Clamp(currentStamina, 0f, maxStamina);
 
-        // Обновляем UI
-        if (bars.targetFillAmount != 0)
-            bars.indexofImage = 2;
-            bars.SetFillAmount(currentStamina/100);
+        Images.value = currentStamina;
     }
 
     // Метод для проверки, можно ли бежать

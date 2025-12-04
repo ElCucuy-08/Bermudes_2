@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class hp : MonoBehaviour
 {
-    public PlayerHealth health;
+    public float health = 100f;
     public Slider hpBar;
     void Start()
     {
@@ -15,21 +15,17 @@ public class hp : MonoBehaviour
 
     void Update()
     {
-        
-        if(health.currentHealth > 100)
+        hpBar.value = health;
+        if(health > 100f)
         {
-            health.currentHealth = 100;
-        }
-        else
-        {
-            health.Die();
+            health = 100f;
         }
     }
     public void OnTriggerEnter(Collider other)
     {                 
         if(other.gameObject.tag == "Player")
         {
-            health.currentHealth -= 10;
+            health -= 10f;
         }
     }
 }

@@ -2,48 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+
 public class PlayerHealth : MonoBehaviour
 {
     public int currentHealth = 100;
-    public PlayerHealth health;
-    public Slider hpBar;
-    public void Update()
+    public Bars bar;
+    public int addXP = 3;
+    public void TakeDamage(int damage)
     {
-        hpBar.value = health.currentHealth;
+        currentHealth -= damage;
+        Debug.Log($"Игрок получил {damage} урона! Осталось HP: {currentHealth}");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+        bar.indexofImage = 0;
+        bar.SetFillAmount(currentHealth);
     }
-    //public void TakeDamage(int damage)
-    //{
-    //    currentHealth -= damage;
-    //    Debug.Log($"Игрок получил {damage} урона! Осталось HP: {currentHealth}");
 
-    //    if (currentHealth <= 0)
-    //    {
-    //        Die();
-    //    }
-    //    bar.indexofImage = 0;
-    //    bar.SetFillAmount(currentHealth);
-    //}
-
-    public void Die(int index = 0)
+    private void Die(int index = 0)
     {
         SceneManager.LoadScene(index);
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("pharmacy"))
-    //    {
-    //        if (currentHealth != 100)
-    //        {
-    //            currentHealth += addXP;
-    //            Debug.Log("Хил");
-    //        }
-    //    }
-    //    else if(other.gameObject.CompareTag("monster"))
-    //    {
-    //        currentHealth -= 10;
-    //        Debug.Log("монстры атакуют");
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("pharmacy"))
+        {
+            if (currentHealth != 100)
+            {
+                currentHealth += addXP;
+                Debug.Log("Хил");
+            }
+        }
+        else if(other.gameObject.CompareTag("monster"))
+        {
+            currentHealth -= 10;
+            Debug.Log("монстры атакуют");
+        }
+    }
 }
