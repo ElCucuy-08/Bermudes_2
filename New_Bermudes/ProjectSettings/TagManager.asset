@@ -16,6 +16,7 @@ TagManager:
   - Plot
   - Fire
   - Babka
+  - SettingsMainMenu
   layers:
   - Default
   - TransparentFX
