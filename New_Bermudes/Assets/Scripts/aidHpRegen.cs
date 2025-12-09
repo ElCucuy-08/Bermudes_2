@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class aidHpRegen : MonoBehaviour
 {
-    public hp hp;
+    public PlayerHealth health;
     public GameObject aid;
     void Start()
     {
@@ -19,7 +19,7 @@ public class aidHpRegen : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            hp.health += 30f;
+            health.currentHealth += 30;
             aid.SetActive(false);
         }
     }
