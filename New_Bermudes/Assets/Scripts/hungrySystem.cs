@@ -29,17 +29,11 @@ public class hungrySystem : MonoBehaviour
     {
         // Пример: если нажат Shift, персонаж бежит
         isRunning = !FirstPersonController.m_IsWalking;
-        if (currentStamina > 0)
-        {
-            FirstPersonController.CanRun = true;
-        }
-        else
-        {
-            FirstPersonController.CanRun = false;
-        }
+
+
         if (isRunning && currentStamina > 0)
         {
-            currentStamina -= staminaDrainRate * Time.deltaTime;
+            currentStamina -= (staminaDrainRate * Time.deltaTime) / 5;
             recoverTimer = 0f;
 
         }
@@ -50,7 +44,7 @@ public class hungrySystem : MonoBehaviour
                 recoverTimer += Time.deltaTime;
                 if (recoverTimer >= staminaRecoverDelay)
                 {
-                    currentStamina += staminaRecoverRate * Time.deltaTime;
+                    //currentStamina += staminaRecoverRate * Time.deltaTime;
                 }
             }
         }

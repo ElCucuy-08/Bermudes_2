@@ -566,6 +566,7 @@
 "Assets/Scripts/SettingManager.cs"
 "Assets/Scripts/SettingON.cs"
 "Assets/Scripts/StaminaScript.cs"
+"Assets/Scripts/WaterHPSystem.cs"
 -langversion:9.0
 /deterministic
 /optimize+
