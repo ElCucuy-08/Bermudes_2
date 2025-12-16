@@ -31,8 +31,8 @@ public class NewBehaviourScript : MonoBehaviour
         Dialog6.gameObject.SetActive(false);
         Dialog7.gameObject.SetActive(false);
         Dialog8.gameObject.SetActive(false);
-        
-        
+        audioSource.Stop();
+
     }
     void Timer()
     {
@@ -41,13 +41,13 @@ public class NewBehaviourScript : MonoBehaviour
     
     public void TurnOffSound()
     {
-        audioSource.mute = true;
+        audioSource.Stop();
     }
 
     
     public void TurnOnSound()
     {
-        audioSource.mute = false;
+        audioSource.Play();
     }
 
     void Updatetime()
