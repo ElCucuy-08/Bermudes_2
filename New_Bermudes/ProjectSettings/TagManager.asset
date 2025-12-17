@@ -17,6 +17,12 @@ TagManager:
   - Fire
   - Babka
   - SettingsMainMenu
+  - banana
+  - orange
+  - watermelon
+  - strawberry
+  - medical
+  - apple
   layers:
   - Default
   - TransparentFX
