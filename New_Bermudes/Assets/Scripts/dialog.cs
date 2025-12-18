@@ -36,7 +36,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
     void Timer()
     {
-        asd += 0.2;
+        asd += 0.12;
     }
     
     public void TurnOffSound()
@@ -63,7 +63,7 @@ public class NewBehaviourScript : MonoBehaviour
             Dialog2.gameObject.SetActive(true);
             
         }
-        else if (asd >60&&asd<120)
+        else if (asd >65&&asd<125)
         {
 
             Dialog2.gameObject.SetActive(false);
@@ -72,7 +72,7 @@ public class NewBehaviourScript : MonoBehaviour
 
 
         }
-        else if (asd > 120&&asd<180)
+        else if (asd > 125&&asd<200)
         {
 
 
@@ -83,7 +83,7 @@ public class NewBehaviourScript : MonoBehaviour
 
 
         }
-        else if (asd > 180&&asd<240)
+        else if (asd > 200&&asd<228)
         {
 
 
@@ -94,7 +94,7 @@ public class NewBehaviourScript : MonoBehaviour
 
 
         }
-        else if (asd>240&&asd<300)
+        else if (asd>228&&asd<270)
         {
 
 
@@ -105,7 +105,7 @@ public class NewBehaviourScript : MonoBehaviour
 
 
         }
-        else if (asd > 300 && asd < 360)
+        else if (asd > 270 && asd < 335)
         {
 
 
@@ -116,7 +116,7 @@ public class NewBehaviourScript : MonoBehaviour
 
 
         }
-        else if (asd > 360 && asd<420)
+        else if (asd > 335 && asd<375)
         {
 
 
@@ -127,7 +127,7 @@ public class NewBehaviourScript : MonoBehaviour
 
 
         }
-        else if (asd > 420)
+        else if (asd > 375)
         {
 
 

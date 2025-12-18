@@ -338450,7 +338450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2441391605366440881, guid: d05107926bcd50c4d8a3d77b27182141, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2441391605366440881, guid: d05107926bcd50c4d8a3d77b27182141, type: 3}
       propertyPath: m_TagString
@@ -483416,8 +483416,8 @@ MonoBehaviour:
   Dialog2: {fileID: 557646936}
   Dialog3: {fileID: 414267460}
   Dialog4: {fileID: 1101434432}
-  Dialog5: {fileID: 207464919}
-  Dialog6: {fileID: 325405194}
+  Dialog5: {fileID: 325405194}
+  Dialog6: {fileID: 207464919}
   Dialog7: {fileID: 13316282}
   Dialog8: {fileID: 1160843506}
 --- !u!114 &2070805871
@@ -504876,7 +504876,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
