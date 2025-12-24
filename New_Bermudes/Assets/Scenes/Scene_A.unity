@@ -62231,11 +62231,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 73853cf2b8caeb645b3629657a4bfe43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.599644
+      value: 16.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 73853cf2b8caeb645b3629657a4bfe43, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 410.91364
+      value: 410.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 73853cf2b8caeb645b3629657a4bfe43, type: 3}
       propertyPath: m_LocalRotation.w
@@ -410331,7 +410331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 64c1bbc2c67c1974eb2ed81410dcba74, type: 3}
+  m_Texture: {fileID: 2800000, guid: e9e3251bb642d0942ad48e294aa8626a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
