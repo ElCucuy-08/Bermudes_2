@@ -7,7 +7,7 @@ public class hungrySystem : MonoBehaviour
 {
     [Header("Настройки выносливости")]
     [SerializeField] private float maxStamina = 100f; // Максимальная выносливость
-    [SerializeField] private float currentStamina;   // Текущая выносливость
+    [SerializeField] public float currentStamina;   // Текущая выносливость
     [SerializeField] private float staminaDrainRate = 10f; // Скорость уменьшения выносливости при беге
     [SerializeField] private float staminaRecoverRate = 5f; // Скорость восстановления выносливости
     [SerializeField] private float staminaRecoverDelay = 2f; // Задержка перед восстановлением

@@ -22,7 +22,8 @@ public class inventory2 : MonoBehaviour
     public Transform holdPosition;
     public GameObject objectToHide;
     private GameObject currentHeldItem;
-
+    public hungrySystem hungrySystem;
+    public PlayerHealth health;
     private void Start()
     {
         bananaImage.gameObject.SetActive(false);
@@ -46,6 +47,28 @@ public class inventory2 : MonoBehaviour
             {
                 SpawnItem(i);
             }
+        }
+        // Удаление объекта по нажатию E
+        if (Input.GetKeyDown(KeyCode.E) && currentHeldItem != null)
+        {
+            if (currentHeldItem.tag != "medical")
+            {
+                if (hungrySystem.currentStamina + 10 <= 90)
+                {
+                    hungrySystem.currentStamina += 10;
+                }
+                else
+                {
+                    hungrySystem.currentStamina = 100;
+                }
+            }
+            else
+            {
+                if(health.currentHealth + 10 <= 90) {  health.currentHealth += 10; }
+                else { health.currentHealth = 100; }
+            }
+                Destroy(currentHeldItem);
+            Debug.Log("Объект удален (съеден)");
         }
     }
 
@@ -114,5 +137,6 @@ public class inventory2 : MonoBehaviour
             currentHeldItem.SetActive(true);
             Debug.Log("Появился предмет из слота " + (index + 1) + ": " + itemPrefab.name);
         }
+
     }
 }
