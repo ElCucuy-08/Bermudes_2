@@ -6,40 +6,33 @@ using UnityEngine.SceneManagement;
 public class Finish_Credits : MonoBehaviour
 {
     public List<Transform> waypoints = new List<Transform>();
+    public List<MovingObject> objectsToMove = new List<MovingObject>(); // Список объектов
     public float speed = 2f;
-    public int sceneIndexToLoad = 1; // Индекс сцены для загрузки
+    public int sceneIndexToLoad = 2;
 
-    private int currentWaypointIndex = 0;
-    private bool isMoving = false;
+    private int objectsFinished = 0;
+    private bool activated = false;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (!activated && other.CompareTag("Player"))
         {
-            isMoving = true;
+            activated = true;
+            foreach (var obj in objectsToMove)
+            {
+                // Запускаем каждый объект
+                obj.StartMoving(waypoints.ToArray(), speed, OnObjectReachedEnd);
+            }
         }
     }
 
-    void Update()
+    void OnObjectReachedEnd()
     {
-        if (isMoving && waypoints.Count > 0)
+        objectsFinished++;
+        // Если все объекты доехали до конца, меняем сцену
+        if (objectsFinished >= objectsToMove.Count)
         {
-            Transform target = waypoints[currentWaypointIndex];
-            transform.position = Vector3.MoveTowards(
-                transform.position,
-                target.position,
-                speed * Time.deltaTime
-            );
-
-            if (Vector3.Distance(transform.position, target.position) < 0.1f)
-            {
-                currentWaypointIndex++;
-                if (currentWaypointIndex >= waypoints.Count)
-                {
-                    // Загружаем новую сцену
-                    SceneManager.LoadScene(sceneIndexToLoad);
-                }
-            }
+            SceneManager.LoadScene(sceneIndexToLoad);
         }
     }
 }

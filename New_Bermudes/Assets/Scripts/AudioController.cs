@@ -12,10 +12,10 @@ public class AudioController : MonoBehaviour
     public AudioClip clip;
     public AudioSource audio;
 
-    void Update()
-    {
-        audio.volume = slider.value;
-    }
+    //void Update()
+    //{
+    //    audio.volume = slider.value;
+    //}
     public void OnOffAudio()
     {
         if (AudioListener.volume == 1)

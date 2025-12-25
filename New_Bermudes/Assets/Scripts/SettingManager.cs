@@ -18,23 +18,23 @@ public class SettingsManager : MonoBehaviour
     void Start()
     {
         // Загружаем сохраненное значение при старте меню
-        LoadSensitivity();
+        //LoadSensitivity();
 
         // Добавляем слушатель к ползунку: когда значение меняется, вызываем метод SaveSensitivityOnChange
-        sensitivitySlider.onValueChanged.AddListener(SaveSensitivityOnChange);
+        //sensitivitySlider.onValueChanged.AddListener(SaveSensitivityOnChange);
     }
 
-    private void LoadSensitivity()
-    {
-        // Получаем значение из PlayerPrefs. Если ключа нет, используем DefaultSensitivity
-        float savedSensitivity = PlayerPrefs.GetFloat(SensitivityKey, DefaultSensitivity);
+    //private void LoadSensitivity()
+    //{
+    //    // Получаем значение из PlayerPrefs. Если ключа нет, используем DefaultSensitivity
+    //    float savedSensitivity = PlayerPrefs.GetFloat(SensitivityKey, DefaultSensitivity);
 
-        // Устанавливаем ползунок в сохраненное положение
-        sensitivitySlider.value = savedSensitivity;
+    //    // Устанавливаем ползунок в сохраненное положение
+    //    sensitivitySlider.value = savedSensitivity;
 
-        // Обновляем текст отображения
-        UpdateSensitivityText(savedSensitivity);
-    }
+    //    // Обновляем текст отображения
+    //    UpdateSensitivityText(savedSensitivity);
+    //}
 
     // Этот метод вызывается UI Slider'ом автоматически при изменении значения
     public void SaveSensitivityOnChange(float newValue)
